@@ -172,3 +172,7 @@ function FriendStatusWithCounter(props) {
  # ✌️  Regras dos Hooks
  Apenas chame Hooks no nível mais alto. Não chame Hooks dentro de loops, condições ou funções aninhadas.
 Apenas chame Hooks de componentes funcionais. Não chame Hooks de funções JavaScript comuns. 
+
+
+links úteis: https://pt-br.reactjs.org/ , https://pt-br.reactjs.org/docs/hooks-state.html , https://pt-br.reactjs.org/docs/hooks-effect.html
+Bibliografia: https://pt-br.reactjs.org/
