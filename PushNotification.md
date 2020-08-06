@@ -268,6 +268,30 @@ export default App;
 - Quando um aplicativo está em segundo plano e é morto no Android e você deseja ouvir a notificação de dados, portanto, é necessário implementar a funcionalidade [JS sem cabeça](https://github.com/invertase/react-native-firebase-docs/blob/master/docs/messaging/receiving-messages.md#2-handle-background-messages) .
 
 - Android, quando o aplicativo não está em segundo plano ou está morto e você guia na biblioteca do Notification react-native-firebase, não será possível obter o título e o corpo da notificação. Ele aparecerá indefinido, portanto, você também precisará enviar o título e o corpo nos dados da notificação.
+
+### Configuração dos icones no android
+
+#### No android para que seja exibido os icones é necessário que você faça os seguintes passos:
+
+
+- Acesse o link para fazer o download dos icones em seus tamanhos específicos [Icon Notification](https://romannurik.github.io/AndroidAssetStudio/icons-notification#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_ac_unit)
+
+ - Após ter feito o download dos icones, coloque eles dentro da pasta `android/app/src/main/res`
+![](Capturar.PNG)
+
+- Proximo passo é você ir no `AndroidManifest.xml` e adicionar as seguintes linhas:
+``` js
+ <manifest ...
+
+    <application ...
+    
+    //Adicione estas linhas
+     <meta-data
+      android:name="com.google.firebase.messaging.default_notification_icon"
+      android:resource="@drawable/ic_stat_logo" />
+```
+
+### E pronto seus icones estarão funcionando perfeitamente
  
 
  
